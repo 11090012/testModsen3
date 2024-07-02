@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Викторина</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/dark.css" id="theme" />
+    <script src="js/questions.mjs" type="module" defer></script>
+    <script src="js/quiz.mjs" type="module" defer></script>
+  </head>
+  <body>
+    <button id="theme-toggle-button">Сменить тему</button>
+    <div id="quiz-container">
+      <div id="question-counter">
+        Вопрос: <span id="current-question"></span> /
+        <span id="total-questions"></span>
+      </div>
+      <div id="timer">Время: <span id="remaining-time"></span></div>
+      <div id="question-text"></div>
+      <div id="answer-choices"></div>
+      <button id="prev-button">Назад</button>
+      <button id="next-button">Вперед</button>
+      <button id="end-button">Закончить</button>
+      <button id="answer-button" style="display: none">Ответить</button>
+      <div id="answer-instruction" style="display: none">
+        Выберите один или несколько вариантов ответов.
+      </div>
+    </div>
+    <div id="results-container" style="display: none">
+      <p>
+        Вы ответили правильно на <span id="correct-answers"></span> из
+        <span id="total-questions"></span> вопросов.
+      </p>
+      <button id="restart-button">Заново</button>
+    </div>
+  </body>
+</html>

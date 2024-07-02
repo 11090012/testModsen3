@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --bg-color: #f1f1f1;
+  --font-family: "Noto Sans", sans-serif;
+  --font-color: #2c2c2c;
+  --container-width: 550px;
+  --container-padding: 20px;
+  --container-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --container-border-radius: 15px;
+  --button-padding: 10px;
+  --button-border-radius: 10px;
+  --answer-choice-padding: 10px;
+  --answer-choice-border-radius: 10px;
+  --answer-choice-border-color: #ccc;
+  --results-margin-top: 20px;
+  --timer-margin-top: 10px;
+  --row-gap: 50px;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 350;
+  color: var(--font-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: var(--row-gap);
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 50px;
+  overflow-x: hidden;
+}
+
+button {
+  padding: var(--button-padding);
+  border-radius: var(--button-border-radius);
+  margin-bottom: 8px;
+}
+
+#quiz-container {
+  width: var(--container-width);
+  background-color: white;
+  padding: var(--container-padding);
+  box-shadow: var(--container-shadow);
+  border-radius: var(--container-border-radius);
+}
+
+#answer-choices {
+  margin-top: var(--timer-margin-top);
+}
+
+.answer-choice {
+  text-align: center;
+  padding: var(--answer-choice-padding);
+  margin-bottom: 5px;
+  border: 1px solid var(--answer-choice-border-color);
+  border-radius: var(--answer-choice-border-radius);
+  cursor: pointer;
+}
+
+.answer-choice.selected {
+  border-color: blue;
+}
+
+.answer-choice.correct {
+  background-color: green;
+  color: white;
+}
+
+.answer-choice.incorrect {
+  background-color: red;
+  color: white;
+}
+
+#results-container {
+  text-align: center;
+  margin-top: var(--results-margin-top);
+}
+
+#timer {
+  margin-top: var(--timer-margin-top);
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --container-width: 90%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  :root {
+    --container-width: 100%;
+    --container-padding: 15px;
+    --font-size: 14px;
+    --button-padding: 8px;
+    --answer-choice-padding: 8px;
+    --row-gap: 30px;
+  }
+
+  #question-counter {
+    font-size: 12px;
+  }
+
+  #timer {
+    font-size: 12px;
+  }
+
+  #question-text {
+    font-size: 14px;
+  }
+
+  .answer-choice {
+    font-size: 14px;
+  }
+
+  #results-container {
+    font-size: 14px;
+  }
+}

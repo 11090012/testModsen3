@@ -1,0 +1,24 @@
+body {
+  background-color: #333;
+  color: #fff;
+}
+
+#quiz-container {
+  background-color: #444;
+}
+
+.answer-choice {
+  border-color: #999;
+}
+
+.answer-choice.correct {
+  background-color: #0f0;
+}
+
+.answer-choice.incorrect {
+  background-color: #f00;
+}
+
+#results-container {
+  color: #fff;
+}
